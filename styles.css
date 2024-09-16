@@ -1,3 +1,34 @@
+/* Custom Scrollbar for WebKit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the vertical scrollbar */
+    height: 6px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #121212; /* Dark background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f39c12; /* Orange color for the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e67e22; /* Darker orange on hover */
+}
+
+/* Custom Scrollbar for Firefox */
+html {
+    scrollbar-color: #f39c12 #121212; /* Thumb color and track color */
+    scrollbar-width: thin; /* Thin scrollbar width */
+}
+
+/* Custom Scrollbar for Edge and Internet Explorer */
+body {
+    scrollbar-color: #f39c12 #121212; /* Thumb color and track color */
+    scrollbar-width: thin; /* Thin scrollbar width */
+}
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -5,37 +36,53 @@
     box-sizing: border-box;
 }
 
+/* Body and HTML */
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Body */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1c1c1e;
-    color: #fff;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for contrast */
     line-height: 1.6;
 }
 
 /* Navbar */
 nav {
-    background: #111;
+    background: #1e1e1e; /* Darker gray for navbar background */
     padding: 1rem 0;
     text-align: center;
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick to the top of the viewport */
+    width: 100%; /* Ensure the navbar spans the full width */
+    z-index: 1000; /* Make sure the navbar stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional: adds shadow for better visibility */
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #e0e0e0; /* Light text color */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #291ec9;
+    color: #f39c12; /* Amber for hover effect */
 }
 
 /* Hero Section */
@@ -48,40 +95,59 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 350px; /* Set a maximum width */
+    height: 350px; /* Set a fixed height to match width for a circular shape */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the circle area */
+    display: block;
+}
+
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: #f39c12; /* Amber text */
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    color: #e0e0e0; /* Light text color */
 }
 
 .hero .btn {
     padding: 10px 30px;
-    background: #291ec9;
+    background: #3ea7ee; /* Bright blue button */
     color: #fff;
     border: none;
     cursor: pointer;
     text-decoration: none;
     font-size: 1rem;
+    border-radius: 8px;
 }
 
 .hero .btn:hover {
-    background: #291ec9;
+    background: #007acc; /* Darker blue for hover effect */
 }
 
 /* Section Styling */
 section {
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     text-align: center;
 }
 
 section h2 {
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    color: #291ec9;
+    color: #3ea7ee; /* Bright blue heading */
 }
 
 section p {
@@ -91,20 +157,22 @@ section p {
 /* Project Section */
 .project-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .card {
-    background: #222;
+    background: #2c3e50; /* Dark gray for card background */
     padding: 2rem;
     margin: 1rem;
     width: 300px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .card h3 {
     margin-bottom: 1rem;
+    color: #f39c12; /* Amber text */
 }
 
 .card p {
@@ -112,14 +180,18 @@ section p {
 }
 
 .card a {
-    color: #291ec9;
+    color: #f39c12; /* Amber links */
     text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
 }
 
 /* Skills Section */
 .skills-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -132,7 +204,12 @@ section p {
 .skill i {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #291ec9;
+    color: #3ea7ee; /* Bright blue icons */
+}
+
+.skill h3 {
+    margin-bottom: 0.5rem;
+    color: #f39c12; /* Amber headings */
 }
 
 /* Contact Section */
@@ -145,27 +222,101 @@ form input, form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: none;
+    border: 1px solid #444;
     border-radius: 5px;
+    background-color: #1e1e1e; /* Dark input background */
+    color: #e0e0e0; /* Light text color */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+form textarea {
+    resize: vertical; /* Allow vertical resizing only */
 }
 
 form button {
-    background: #291ec9;
+    background: #c07600;
     color: #fff;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
 }
 
 form button:hover {
-    background: #291ec9;
+    background: #f39c12;
 }
 
 /* Footer */
 footer {
-    background: #111;
+    background: #1e1e1e; /* Darker gray for footer background */
     padding: 1rem 0;
     text-align: center;
-    color: #fff;
+    color: #e0e0e0; /* Light text color */
     font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skill {
+        width: auto;
+    }
+}
+
+/* Small Devices */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skill {
+        width: auto;
+        margin: 0.5rem 0;
+    }
 }
