@@ -12,13 +12,15 @@
     <!-- Navbar -->
     <nav>
         <ul>
+            <li class="logo"><a href="#home"><img src="logo.png" alt="Logo"></a></li>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -30,21 +32,43 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-cards">
-            <div class="card">
-                <h3>Project 1</h3>
-                <p>Description of your first project.</p>
-                <a href="https://github.com/swaraj-das" target="_blank">View on GitHub</a>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hi! I'm <strong>Swaraj Das</strong>, a passionate <strong>UI/UX designer</strong> and <strong>programmer</strong> currently in my second year of college. I love creating user-friendly interfaces and solving complex problems through design and code. My journey in tech began in high school, where I discovered my interest in programming and design. Since then, I have been continually learning and growing in both fields.</p>
+                
+                <!-- Education Section -->
+                <section id="education">
+                    <h2>Education</h2>
+                    <div class="education-grid">
+                        <!-- School Box -->
+                        <div class="education-box">
+                            <h4>School</h4>
+                            <p>Singur Mahamaya High School</p>
+                            <div class="hover-info">
+                                <p>Passed in 2023</p>
+                                <p>Science Stream</p>
+                            </div>
+                        </div>
+
+                        <!-- College Box -->
+                        <div class="education-box">
+                            <h4>College</h4>
+                            <p>Academy of Technology</p>
+                            <div class="hover-info">
+                                <p>Pursuing B.Tech (2nd Year)</p>
+                                <p>Computer Science & Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <p>Whether it's designing intuitive user experiences or diving deep into code, I’m always excited about learning something new. If you're interested in collaborating or just want to connect, feel free to reach out!</p>
             </div>
-            <div class="card">
-                <h3>Project 2</h3>
-                <p>Description of your second project.</p>
-                <a href="https://github.com/swaraj-das" target="_blank">View on GitHub</a>
+            <div class="about-image">
+                <img src="pic-removebg.png" alt="Swaraj Das" class="profile-image">
             </div>
-            <!-- Add more project cards as needed -->
         </div>
     </section>
 
@@ -76,17 +100,35 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out for collaborations or just to connect!</p>
-        <form action="mailto:swarajdas625w@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+            <div class="project-cards">
+                <div class="card">
+                    <h3>Project 1</h3>
+                    <p>Description of your first project.</p>
+                    <a href="https://github.com/swaraj-das" target="_blank">View on GitHub</a>
+                </div>
+                <div class="card">
+                    <h3>Project 2</h3>
+                    <p>Description of your second project.</p>
+                    <a href="https://github.com/swaraj-das" target="_blank">View on GitHub</a>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
     </section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out for collaborations or just to connect!</p>
+    <form action="mailto:swarajdas625w@gmail.com" method="post" enctype="text/plain" autocomplete="off">
+        <input type="text" name="name" placeholder="Your Name" required autocomplete="off">
+        <input type="email" name="email" placeholder="Your Email" required autocomplete="off">
+        <textarea name="message" rows="5" placeholder="Your Message" required autocomplete="off"></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
 
     <!-- Footer -->
     <footer>
