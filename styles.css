@@ -1,32 +1,42 @@
 /* Custom Scrollbar for WebKit Browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-    width: 8px; /* Width of the vertical scrollbar */
-    height: 6px; /* Height of the horizontal scrollbar */
+    width: 8px;
+    /* Width of the vertical scrollbar */
+    height: 6px;
+    /* Height of the horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background: #121212; /* Dark background of the scrollbar track */
+    background: #121212;
+    /* Dark background of the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #f39c12; /* Orange color for the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+    background: #f39c12;
+    /* Orange color for the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners for the scrollbar thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #e67e22; /* Darker orange on hover */
+    background: #e67e22;
+    /* Darker orange on hover */
 }
 
 /* Custom Scrollbar for Firefox */
 html {
-    scrollbar-color: #f39c12 #121212; /* Thumb color and track color */
-    scrollbar-width: thin; /* Thin scrollbar width */
+    scrollbar-color: #f39c12 #121212;
+    /* Thumb color and track color */
+    scrollbar-width: thin;
+    /* Thin scrollbar width */
 }
 
 /* Custom Scrollbar for Edge and Internet Explorer */
 body {
-    scrollbar-color: #f39c12 #121212; /* Thumb color and track color */
-    scrollbar-width: thin; /* Thin scrollbar width */
+    scrollbar-color: #f39c12 #121212;
+    /* Thumb color and track color */
+    scrollbar-width: thin;
+    /* Thin scrollbar width */
 }
 
 /* Basic Reset */
@@ -37,23 +47,28 @@ body {
 }
 
 /* Body and HTML */
-html, body {
+html,
+body {
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
 }
 
 /* Body */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text color for contrast */
+    background-color: #121212;
+    /* Dark background */
+    color: #e0e0e0;
+    /* Light text color for contrast */
     line-height: 1.6;
 }
 
 /* Navbar styling */
 nav {
     background: #1e1e1e;
-    padding: 0.5rem 0; /* Reduced padding for a narrower navbar */
+    padding: 0.5rem 0;
+    /* Reduced padding for a narrower navbar */
     text-align: center;
     position: sticky;
     top: 0;
@@ -74,17 +89,20 @@ nav ul {
 
 /* Logo styling */
 nav ul li.logo {
-    margin-left: 20px; /* Add some margin to the left for better alignment */
+    margin-left: 20px;
+    /* Add some margin to the left for better alignment */
 }
 
 nav ul li.logo img {
-    width: 50px; /* Adjust logo width if needed */
+    width: 50px;
+    /* Adjust logo width if needed */
     height: auto;
 }
 
 /* Spacing for navigation links */
 nav ul li {
-    margin: 0 20px; /* Reduced margin for narrower navbar */
+    margin: 0 20px;
+    /* Reduced margin for narrower navbar */
 }
 
 /* Nav links styling */
@@ -93,7 +111,8 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
-    font-size: 1rem; /* Increased font size for better readability */
+    font-size: 1rem;
+    /* Increased font size for better readability */
 }
 
 nav ul li a:hover {
@@ -119,28 +138,35 @@ nav ul li a:hover {
 
 .hero-image {
     width: 100%;
-    max-width: 350px; /* Set a maximum width */
-    height: 350px; /* Set a fixed height to match width for a circular shape */
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the image covers the circle area */
+    max-width: 350px;
+    /* Set a maximum width */
+    height: 350px;
+    /* Set a fixed height to match width for a circular shape */
+    border-radius: 50%;
+    /* Make the image circular */
+    object-fit: cover;
+    /* Ensure the image covers the circle area */
     display: block;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-top: 1rem;
-    color: #f39c12; /* Amber text */
+    color: #f39c12;
+    /* Amber text */
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: #e0e0e0; /* Light text color */
+    color: #e0e0e0;
+    /* Light text color */
 }
 
 .hero .btn {
     padding: 10px 30px;
-    background: #3ea7ee; /* Bright blue button */
+    background: #3ea7ee;
+    /* Bright blue button */
     color: #fff;
     border: none;
     cursor: pointer;
@@ -150,7 +176,8 @@ nav ul li a:hover {
 }
 
 .hero .btn:hover {
-    background: #007acc; /* Darker blue for hover effect */
+    background: #007acc;
+    /* Darker blue for hover effect */
 }
 
 /* Section Styling */
@@ -162,7 +189,8 @@ section {
 section h2 {
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    color: #3ea7ee; /* Bright blue heading */
+    color: #3ea7ee;
+    /* Bright blue heading */
 }
 
 section p {
@@ -170,34 +198,79 @@ section p {
 }
 
 /* About Section */
+#about {
+    display: flex;
+    flex-direction: column;
+    /* Stack heading and content vertically */
+    align-items: center;
+    height: 85vh;
+    /* Full viewport height */
+    background-color: #1c1f26;
+    /* Dark background for contrast */
+    padding: 3rem 2rem;
+    /* Increased padding for spacing */
+}
+
+/* About Me Heading Outside the Box */
+#about h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    /* Slightly larger heading */
+    color: #f39c12;
+    /* Amber color for heading */
+    margin: 1rem;
+    margin-bottom: 2rem;
+    /* Space between heading and the box */
+}
+
+/* About Content Wrapper */
 .about-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 2rem 0;
+    justify-content: space-between;
+    /* Spacing between text and image */
+    max-width: 1200px;
+    width: 100%;
+    background-color: #2a2d36;
+    /* Slightly lighter dark background */
+    border-radius: 15px;
+    padding: 3rem;
+    /* Increased padding for more spacing inside the box */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow for depth */
 }
 
+/* About Text */
 .about-text {
     max-width: 600px;
     margin-right: 2rem;
-    color: #e0e0e0; /* Light text for dark theme */
+    /* Space between text and image */
+    color: #e0e0e0;
+    /* Light text for dark theme */
+    text-align: left;
+    /* Align text to the left */
 }
 
-.about-text h3 {
-    margin-top: 1.5rem;
-    font-size: 1.8rem;
-    color: #f39c12; /* Amber heading */
+/* Paragraph Styling */
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    /* Better readability */
+    margin-bottom: 1.5rem;
+    /* Add space between paragraphs */
 }
 
+/* Profile Image */
 .about-image .profile-image {
-    width: 400px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
+    border: 4px solid #f39c12;
+    /* Adding a border around the image */
 }
 
-/* Education Grid */
+/* Education Section */
 .education-grid {
     display: flex;
     flex-wrap: wrap;
@@ -206,17 +279,18 @@ section p {
     margin-top: 2rem;
 }
 
-/* Education Box */
 .education-box {
-    background-color: #1c1f26; /* Dark background */
+    background-color: #1c1f26;
+    /* Dark background */
     color: #f0f0f0;
     padding: 2rem;
-    width: 280px;
+    width: 320px;
     border-radius: 12px;
     text-align: center;
     position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(97, 97, 97, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .education-box:hover {
@@ -224,20 +298,25 @@ section p {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Heading */
-.education-box h4 {
-    font-size: 1.8rem;
-    color: #3ea7ee; /* Bright blue heading */
+.education-logo {
+    width: 80px;
+    height: auto;
     margin-bottom: 1rem;
 }
 
-/* Paragraph */
-.education-box p {
-    font-size: 1rem;
+.education-box h4 {
+    font-size: 18px;
+    color: #3ea7ee;
+    /* Bright blue heading */
+    margin-bottom: 1rem;
+}
+
+.education-box .name {
+    font-size: 20px;
+    font-weight: bold;
     margin-bottom: 1.5rem;
 }
 
-/* Hover Info Section */
 .education-box:hover .hover-info {
     opacity: 1;
     transform: translateY(0);
@@ -253,18 +332,28 @@ section p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     border-radius: 12px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.hover-info p {
+.hover-info .my-edu {
     font-size: 1.1rem;
-    color: #f39c12; /* Amber text for hover content */
-    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #f39c12;
+    /* Amber text for hover content */
+    margin-bottom: 0.2rem;
 }
+
+/* Spacing between hover text and actual data */
+.hover-info p+p {
+    margin-left: 5px;
+    font-weight: 550;
+    display: inline-block;
+}
+
 
 
 
@@ -276,7 +365,8 @@ section p {
 }
 
 .card {
-    background: #2c3e50; /* Dark gray for card background */
+    background: #2c3e50;
+    /* Dark gray for card background */
     padding: 2rem;
     margin: 1rem;
     width: 300px;
@@ -286,7 +376,8 @@ section p {
 
 .card h3 {
     margin-bottom: 1rem;
-    color: #f39c12; /* Amber text */
+    color: #f39c12;
+    /* Amber text */
 }
 
 .card p {
@@ -294,7 +385,8 @@ section p {
 }
 
 .card a {
-    color: #f39c12; /* Amber links */
+    color: #f39c12;
+    /* Amber links */
     text-decoration: none;
 }
 
@@ -306,24 +398,127 @@ section p {
 .skills-grid {
     display: flex;
     justify-content: center;
+    /* Aligns items at the start */
     flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
+    gap: 35px;
+    /* Adjusted spacing between cards */
 }
 
 .skill {
+    margin: 0;
+    /* Ensures no extra space from the skill cards */
+}
+
+.skill {
+    perspective: 1000px;
+    /* Creates 3D space for the flip */
+}
+
+.language-list {
+    list-style-type: '- ';
+    /* Dashes as bullet points */
+    padding: 0;
+    /* Removes padding */
+    text-align: left;
+    /* Centers the list items */
+}
+
+.language-item {
+    font-size: 16px;
+    /* Adjust font size as needed */
+    margin: 5px 0;
+    /* Adds some space between items */
+}
+
+.flip-card {
+    width: 300px;
+    height: 350px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    margin: 1rem;
-    width: 150px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
 }
 
-.skill i {
-    font-size: 3rem;
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front h3 {
+    color: #3ea7ee;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #f39c12;
+    /* Amber border */
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-color: #1c1c1c;
+    /* Dark background */
+    color: white;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    color: white;
+    padding: 20px;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    /* Align logos and bars vertically */
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 1rem;
-    color: #3ea7ee; /* Bright blue icons */
 }
 
-.skill h3 {
-    margin-bottom: 0.5rem;
-    color: #f39c12; /* Amber headings */
+.language-logo {
+    width: 50px;
+    /* Adjust size as needed */
+    height: auto;
+    margin-right: 1rem;
+}
+
+.bar-container {
+    flex-grow: 1;
+    /* Make bar container take up remaining space */
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-left: 1rem;
+    /* Spacing between logo and bar */
+    height: 20px;
+    /* Ensure the height matches the bar */
+}
+
+.bar {
+    height: 100%;
+    /* Make the bar fill the container height */
+    background-color: #db8700;
+    border-radius: 10px;
+    text-align: right;
+    padding-right: 10px;
+    color: #ffffff;
+    font-weight: bolder;
+    line-height: 20px;
+    /* Vertical alignment of text */
 }
 
 /* Contact Section */
@@ -332,19 +527,24 @@ form {
     margin: 0 auto;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #444;
     border-radius: 5px;
-    background-color: #1e1e1e; /* Dark input background */
-    color: #e0e0e0; /* Light text color */
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    background-color: #1e1e1e;
+    /* Dark input background */
+    color: #e0e0e0;
+    /* Light text color */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
 }
 
 form textarea {
-    resize: vertical; /* Allow vertical resizing only */
+    resize: vertical;
+    /* Allow vertical resizing only */
 }
 
 form button {
@@ -363,10 +563,12 @@ form button:hover {
 
 /* Footer */
 footer {
-    background: #1e1e1e; /* Darker gray for footer background */
+    background: #1e1e1e;
+    /* Darker gray for footer background */
     padding: 1rem 0;
     text-align: center;
-    color: #e0e0e0; /* Light text color */
+    color: #e0e0e0;
+    /* Light text color */
     font-size: 0.9rem;
 }
 
