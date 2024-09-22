@@ -585,7 +585,7 @@ footer p {
 /* ----------------------------------------------Responsive Styles--------------------------------------------------*/
 
 /* Mobile Devices */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
     .hero-image {
         max-width: 250px; /* Adjust max-width for smaller screens */
         height: 250px; /* Adjust height to match the new width */
@@ -648,8 +648,7 @@ footer p {
     }
 
     .skills-grid {
-        flex-direction: column;
-        align-items: center; /* Center align skill cards */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
     }
 
     .skill {
@@ -659,7 +658,7 @@ footer p {
 }
 
 /* Small Devices */
-@media (max-width: 480px) {
+@media (max-width: 660px) {
     .hero h1 {
         font-size: 1.5rem;
         margin: 0 0.5rem; /* Adjust margin for small screens */
@@ -694,8 +693,7 @@ footer p {
     }
 
     .skills-grid {
-        flex-direction: column;
-        align-items: center; /* Center align skill cards */
+        grid-template-columns: 1fr; /* 1 column on small screens */
     }
 
     .skill {
