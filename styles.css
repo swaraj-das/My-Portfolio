@@ -201,63 +201,47 @@ section p {
 #about {
     display: flex;
     flex-direction: column;
-    /* Stack heading and content vertically */
     align-items: center;
-    height: 85vh;
-    /* Full viewport height */
-    background-color: #1c1f26;
-    /* Dark background for contrast */
-    padding: 3rem 2rem;
-    /* Increased padding for spacing */
+    height: auto; /* Allow height to adjust based on content */
+    background-color: #1c1f26; /* Dark background for contrast */
+    padding: 3rem 2rem; /* Increased padding for spacing */
 }
 
 /* About Me Heading Outside the Box */
 #about h3 {
     text-align: center;
-    font-size: 2.5rem;
-    /* Slightly larger heading */
-    color: #f39c12;
-    /* Amber color for heading */
-    margin: 1rem;
-    margin-bottom: 2rem;
-    /* Space between heading and the box */
+    font-size: 2.5rem; /* Slightly larger heading */
+    color: #f39c12; /* Amber color for heading */
+    margin: 1rem 0 2rem 0; /* Space around heading */
 }
 
 /* About Content Wrapper */
 .about-content {
     display: flex;
+    flex-direction: row; /* Row for larger screens */
     align-items: center;
-    justify-content: space-between;
-    /* Spacing between text and image */
+    justify-content: space-between; /* Spacing between text and image */
     max-width: 1200px;
     width: 100%;
-    background-color: #2a2d36;
-    /* Slightly lighter dark background */
+    background-color: #2a2d36; /* Slightly lighter dark background */
     border-radius: 15px;
-    padding: 3rem;
-    /* Increased padding for more spacing inside the box */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    /* Subtle shadow for depth */
+    padding: 3rem; /* Increased padding for more spacing inside the box */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
 /* About Text */
 .about-text {
     max-width: 600px;
-    margin-right: 2rem;
-    /* Space between text and image */
-    color: #e0e0e0;
-    /* Light text for dark theme */
-    text-align: left;
-    /* Align text to the left */
+    margin-right: 2rem; /* Space between text and image */
+    color: #e0e0e0; /* Light text for dark theme */
+    text-align: justify;
 }
 
 /* Paragraph Styling */
 .about-text p {
     font-size: 1.2rem;
-    line-height: 1.6;
-    /* Better readability */
-    margin-bottom: 1.5rem;
-    /* Add space between paragraphs */
+    line-height: 1.6; /* Better readability */
+    margin-bottom: 1.5rem; /* Add space between paragraphs */
 }
 
 /* Profile Image */
@@ -267,7 +251,7 @@ section p {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #f39c12;
-    /* Adding a border around the image */
+    margin-right: 70px; /* Adjust the value as needed */
 }
 
 /* Education Section */
@@ -491,7 +475,7 @@ section p {
 }
 
 .language-logo {
-    width: 50px;
+    width: 40px;
     /* Adjust size as needed */
     height: auto;
     margin-right: 1rem;
@@ -576,35 +560,75 @@ footer {
 
 /* Mobile Devices */
 @media (max-width: 768px) {
+    .hero-image {
+        max-width: 250px; /* Adjust max-width for smaller screens */
+        height: 250px; /* Adjust height to match the new width */
+        margin-bottom: 20px; /* Reduce margin-bottom to move content up */
+    }
+
+    .hero-content {
+        margin-top: 20px; /* Optional: add margin to push content down if needed */
+        margin-bottom: 10px; /* Adjust margin-bottom */
+        padding-top: 0; /* Remove or adjust padding for mobile */
+    }
+
     nav ul li {
         display: block;
-        margin: 10px 0;
+        margin: 5px 0;
+        text-align: center; /* Center align navigation items */
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2rem !important;
+        margin: 0 1rem; /* Add margin for spacing */
     }
-
+    
     .hero p {
-        font-size: 1rem;
-    }
+        font-size: 1.2rem !important;
+        margin: 0 1rem; /* Add margin for spacing */
+    }    
 
     .hero .btn {
-        padding: 8px 16px;
-        font-size: 0.9rem;
+        margin-top: 20px;
+        padding: 8px 18px !important;
+        font-weight: bold;
+        font-size: 15px !important; /* Add !important to ensure it takes precedence */
+    }    
+
+    .about-content {
+        flex-direction: column; /* Stack content on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .about-text {
+        margin-right: 0; /* Remove right margin for smaller screens */
+        text-align: justify;; /* Center text on small screens */
+    }
+
+    .about-image {
+        margin-top: 1rem; /* Add space above the image */
+    }
+
+    .about-image .profile-image {
+        width: 200px; /* Adjust image size */
+        height: 200px; /* Adjust image size */
+        margin-left: 70px;
     }
 
     .card {
         width: 100%;
-        max-width: 400px;
+        max-width: 90%; /* Use more of the available width */
+        margin: 10px; /* Add margin around cards */
     }
 
     .skills-grid {
         flex-direction: column;
+        align-items: center; /* Center align skill cards */
     }
 
     .skill {
         width: auto;
+        margin-bottom: 20px; /* Add space between skill items */
     }
 }
 
@@ -612,10 +636,12 @@ footer {
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 1.5rem;
+        margin: 0 0.5rem; /* Adjust margin for small screens */
     }
 
     .hero p {
         font-size: 0.9rem;
+        margin: 0 0.5rem; /* Adjust margin for small screens */
     }
 
     .hero .btn {
@@ -623,16 +649,36 @@ footer {
         font-size: 0.8rem;
     }
 
+    #about h3 {
+        font-size: 2rem; /* Smaller heading on very small screens */
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Smaller paragraph text */
+    }
+
+    .about-image .profile-image {
+        width: 180px; /* Further adjust image size */
+        height: 180px; /* Further adjust image size */
+    }
+
     .card {
         padding: 1rem;
+        max-width: 95%; /* Use nearly full width */
     }
 
     .skills-grid {
         flex-direction: column;
+        align-items: center; /* Center align skill cards */
     }
 
     .skill {
         width: auto;
         margin: 0.5rem 0;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.85rem; /* Smaller input font size */
     }
 }
