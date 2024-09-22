@@ -165,14 +165,15 @@ nav ul li a:hover {
 
 .hero .btn {
     padding: 10px 30px;
-    background: #3ea7ee;
-    /* Bright blue button */
+    background: #3ea7ee; /* Bright blue button */
     color: #fff;
     border: none;
     cursor: pointer;
     text-decoration: none;
     font-size: 1rem;
+    font-weight: bold;
     border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(180, 180, 180, 0.5); /* Adding shadow */
 }
 
 .hero .btn:hover {
@@ -379,24 +380,28 @@ section p {
 }
 
 /* Skills Section */
+/* Skills Section */
 .skills-grid {
-    display: flex;
-    justify-content: center;
-    /* Aligns items at the start */
-    flex-wrap: wrap;
-    /* Allows wrapping on smaller screens */
-    gap: 35px;
-    /* Adjusted spacing between cards */
+    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    grid-template-rows: repeat(2, auto); /* 2 rows of auto height */
+    justify-items: center; /* Center items in each grid cell */
+    align-items: center; /* Vertically center items in each grid cell */
 }
 
 .skill {
     margin: 0;
-    /* Ensures no extra space from the skill cards */
+    perspective: 1000px; /* Creates 3D space for the flip */
+    display: flex; /* Ensure flexbox is used for centering */
+    justify-content: center; /* Center the flip card */
+    align-items: center; /* Center the flip card */
 }
 
-.skill {
-    perspective: 1000px;
-    /* Creates 3D space for the flip */
+.flip-card {
+    width: 300px;
+    height: 350px;
+    cursor: pointer;
 }
 
 .language-list {
@@ -547,16 +552,37 @@ form button:hover {
 
 /* Footer */
 footer {
-    background: #1e1e1e;
-    /* Darker gray for footer background */
-    padding: 1rem 0;
     text-align: center;
-    color: #e0e0e0;
-    /* Light text color */
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    gap: 25px; /* Adds consistent spacing between icons */
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 2rem; /* Increased font size for larger icons */
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #3ea7ee; /* Change color on hover */
+}
+
+footer p {
+    margin-top: 10px;
     font-size: 0.9rem;
 }
 
-/* Responsive Styles */
+
+/* ----------------------------------------------Responsive Styles--------------------------------------------------*/
 
 /* Mobile Devices */
 @media (max-width: 768px) {
