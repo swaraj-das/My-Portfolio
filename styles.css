@@ -633,18 +633,72 @@ footer {
 .social-links a {
     color: #fff;
     font-size: 2rem; /* Increased font size for larger icons */
-    transition: color 0.3s;
+    position: relative;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
     text-decoration: none;
 }
 
+/* Scale up the icon on hover */
 .social-links a:hover {
-    color: #3ea7ee; /* Change color on hover */
+    transform: scale(1.2); /* Scale up the icon */
+    color: #3ea7ee; /* Default hover color */
+}
+
+/* Custom hover colors for each social platform */
+.social-links a:nth-child(1):hover {
+    color: #1877f2; /* Facebook Blue */
+}
+
+.social-links a:nth-child(2):hover {
+    color: #e1306c; /* Instagram Red */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-links a:nth-child(3):hover {
+    color: #0a66c2; /* LinkedIn Blue */
+}
+
+.social-links a.github-icon {
+    display: inline-block; /* Allows padding and margins to be applied */
+}
+
+.social-links a.github-icon::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute;
+    top: 48%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    width: 30px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    background-color: #000000; /* Black background */
+    border-radius: 50%; /* Make it a circle */
+    opacity: 0; /* Start transparent */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    transform: translate(-50%, -50%); /* Move it to center */
+    z-index: 0; /* Behind the icon */
+}
+
+.social-links a.github-icon:hover::before {
+    opacity: 1; /* Show black circle on hover */
+}
+
+.social-links a.github-icon i {
+    color: #fff; /* White icon color */
+    position: relative; /* Position relative to layer above the circle */
+    z-index: 1; /* Ensure the icon is above the circle */
+}
+
+.social-links a:nth-child(5):hover {
+    color: #9e0084; /* Custom color for the Discord icon */
 }
 
 footer p {
     margin-top: 10px;
     font-size: 0.9rem;
 }
+
+
 
 
 /* ----------------------------------------------Responsive Styles--------------------------------------------------*/
