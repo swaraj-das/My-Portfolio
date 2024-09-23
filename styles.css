@@ -67,18 +67,30 @@ body {
 /* Navbar styling */
 nav {
     background: #1e1e1e;
-    padding: 0.5rem 0;
-    /* Reduced padding for a narrower navbar */
+    padding: 0.5rem 0; /* Adjust height */
     text-align: center;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling outside the list */
+.logo {
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
 }
 
 /* Flexbox layout for navbar */
-nav ul {
+.nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -87,37 +99,38 @@ nav ul {
     justify-content: center;
 }
 
-/* Logo styling */
-nav ul li.logo {
-    margin-left: 20px;
-    /* Add some margin to the left for better alignment */
-}
-
-nav ul li.logo img {
-    width: 50px;
-    /* Adjust logo width if needed */
-    height: auto;
-}
-
-/* Spacing for navigation links */
-nav ul li {
+.nav-links li {
     margin: 0 20px;
-    /* Reduced margin for narrower navbar */
 }
 
 /* Nav links styling */
-nav ul li a {
+.nav-links li a {
     color: #e0e0e0;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
     font-size: 1rem;
-    /* Increased font size for better readability */
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     color: #f39c12;
 }
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
 
 /* Hero Section */
 .hero {
@@ -746,10 +759,29 @@ footer p {
         padding-top: 0; /* Remove or adjust padding for mobile */
     }
 
-    nav ul li {
-        display: block;
-        margin: 5px 0;
-        text-align: center; /* Center align navigation items */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1e1e1e;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 6px 0;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+    }
+
+    .nav-active {
+        display: flex;
     }
 
     .hero h1 {
