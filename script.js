@@ -8,3 +8,4 @@ hamburger.addEventListener('click', () => {
     // Toggle 'open' class for hamburger animation (optional)
     hamburger.classList.toggle('open');
 });
+

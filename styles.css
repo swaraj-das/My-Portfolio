@@ -138,7 +138,6 @@ nav {
     color: #f39c12;
 }
 
-
 /* Hamburger menu */
 .hamburger {
     display: none;
@@ -523,7 +522,7 @@ section p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
 }
 
 .card {
@@ -610,6 +609,94 @@ section p {
     transform: scale(1.2); /* Optional: slightly increase size on hover */
     transition: transform 0.3s ease;
 }
+
+/* My Designs Section */
+#designs {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#designs h2 {
+    font-size: 2.5rem;
+    color: #3ea7ee;
+    margin-bottom: 40px;
+}
+
+/* Gallery layout */
+.design-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Add some more spacing */
+}
+
+.design-item {
+    width: 380px; /* Slightly larger width for better viewing */
+    height: 440px; /* Fixed height for all boxes */
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Evenly space content */
+    align-items: center;
+}
+
+.design-item:hover {
+    transform: scale(1.04); /* Enhance hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.design-item img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.design-title {
+    font-size: 1.2rem;
+    color: #3ea7ee;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    flex-grow: 1; /* Ensure description expands to fill remaining space */
+}
+
+.figma-link {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.figma-button {
+    background-color: #f39c12;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.figma-button:hover {
+    background-color: #e67e22;
+}
+
+
+
 
 /* Contact Section */
 form {
@@ -782,7 +869,10 @@ footer p {
         padding-top: 0; /* Remove or adjust padding for mobile */
     }
 
-    
+    nav .logo{
+        justify-content: flex-start;
+        margin-right: 850px;
+    }
 
     .nav-links {
         display: none;
@@ -909,5 +999,24 @@ footer p {
     form input,
     form textarea {
         font-size: 0.85rem; /* Smaller input font size */
+    }
+}
+
+@media (max-width: 930px) {
+    nav .logo {
+        margin-right: 700px; /* Further reduce margin for tablets */
+    }
+}
+
+@media (max-width: 540px) {
+    nav .logo {
+        margin-right: 450px; /* Further reduce margin for tablets */
+    }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+    nav .logo {
+        margin-right: 300px; /* Minimal margin for mobile devices */
     }
 }
