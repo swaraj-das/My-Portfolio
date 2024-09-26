@@ -1063,6 +1063,14 @@ footer p {
         margin-bottom: 20px; /* Add space between skill items */
     }
 
+    .lightbox-content {
+        max-width: 90%;  /* Set the max size of the image to 50% of screen width */
+        max-height: 100%; /* Make sure it doesn't exceed 80% of screen height */
+        border-radius: 8px;
+        object-fit: contain; /* Ensure the image scales down proportionally */
+        margin: 40px;
+    }
+
 }
 
 /* Small Devices */
