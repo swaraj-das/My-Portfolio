@@ -389,6 +389,15 @@
             </a>
         </div>
         <div class="design-item">
+            <img src="images/design3.jpg" alt="Design 2" class="design-thumbnail">
+            <p class="design-title">Mobile UI of a new UPI Company</p>
+            <p class="description"> 
+                My first project as UI/UX designer, featuring a simple and minimal homepage layout of an UPI applicatin for easy navigation.</p>
+            <a href="https://www.figma.com/file/example2" target="_blank" class="figma-link">
+                <button class="figma-button">View Figma File</button>   
+            </a>
+        </div>
+        <div class="design-item">
             <img src="images/design2.jpg" alt="Design 2" class="design-thumbnail">
             <p class="design-title">Basic Beginner Home Page</p>
             <p class="description">A simple homepage layout, great for new web developers to understand layout fundamentals.</p>
@@ -396,9 +405,28 @@
                 <button class="figma-button">View Figma File</button>   
             </a>
         </div>
-        <!-- Add more design items as needed -->
+    </div>
+    
+    <h3>Posters</h3>
+    <div class="poster-gallery">
+        <img src="images/poster1.png" alt="Poster 1" class="poster" onclick="openLightbox(this)">
+        <img src="images/poster2.jpeg" alt="Poster 2" class="poster" onclick="openLightbox(this)">
+        <!-- Add more posters as needed -->
+    </div>
+
+    <h3>Logos</h3>
+    <div class="logo-container">
+        <img src="images/logo1.png" alt="Logo 1" class="my-logo" onclick="openLightbox(this)">
+        <img src="images/logo2.png.jpg" alt="Logo 2" class="my-logo" onclick="openLightbox(this)">
     </div>
 </section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+
 
 
 
@@ -410,7 +438,7 @@
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
+            <button type="submit" class="butn">Send Message</button>
         </form>
     </section>
 
