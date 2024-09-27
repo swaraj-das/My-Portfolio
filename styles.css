@@ -989,12 +989,6 @@ footer p {
 
 /* ----------------------------------------------Responsive Styles--------------------------------------------------*/
 
-@media (max-width: 1400px) {
-    .social-icons {
-        display: none;
-    }
-}
-
 @media (max-width: 980px) { 
     .hero-image {
         max-width: 250px; /* Adjust max-width for smaller screens */
@@ -1006,6 +1000,10 @@ footer p {
         margin-top: 20px; /* Optional: add margin to push content down if needed */
         margin-bottom: 10px; /* Adjust margin-bottom */
         padding-top: 0; /* Remove or adjust padding for mobile */
+    }
+
+    .social-icons {
+        display: none;
     }
 
     nav .logo{
