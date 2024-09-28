@@ -75,7 +75,7 @@ body {
 }
 
 .social-icons img {
-    width: 44px; /* Adjust size as needed */
+    width: 40px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
     transition: transform 0.3s; /* Smooth hover effect */
     border-radius: 10px;
