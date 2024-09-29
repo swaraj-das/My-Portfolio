@@ -1180,3 +1180,19 @@ footer p {
         margin-right: 300px; /* Minimal margin for mobile devices */
     }
 }
+
+@media(max-width: 398px) {
+    .logo-container {
+        display: flex;
+        justify-content: center; /* Center logos horizontally */
+        gap: 3px;                /* Add space between logos */
+        flex-wrap: nowrap;        /* Prevent logos from wrapping */
+    }
+
+    .my-logo {
+        width: 100px;             /* Reduce width for smaller screens */
+        height: 100px;            /* Set height to match width */
+        border-radius: 50%;      /* Make them round */
+        object-fit: cover;       /* Maintain aspect ratio */
+    }
+}
