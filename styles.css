@@ -1183,16 +1183,18 @@ footer p {
 
 @media(max-width: 398px) {
     .logo-container {
-        display: flex;
-        justify-content: center; /* Center logos horizontally */
-        gap: 3px;                /* Add space between logos */
-        flex-wrap: nowrap;        /* Prevent logos from wrapping */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
+        gap: 10px; /* Space between logos */
+        justify-items: center; /* Center logos in each grid cell */
     }
 
     .my-logo {
-        width: 100px;             /* Reduce width for smaller screens */
-        height: 100px;            /* Set height to match width */
-        border-radius: 50%;      /* Make them round */
-        object-fit: cover;       /* Maintain aspect ratio */
+        width: 100px; /* Set the width of each logo */
+        height: 100px; /* Set the height to match the width for a square logo */
+        border-radius: 50%; /* Make the logos round */
+        object-fit: cover; /* Ensure the image fits within the circle */
     }
 }
+
+
