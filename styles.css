@@ -889,6 +889,41 @@ footer h3 {
     font-weight: bold; /* Make text bold */
 }
 
+footer .text{
+    margin-bottom: 0;
+}
+
+.contact-info {
+    color: #ffffff; /* White text for readability */
+    padding: 10px; /* Increased padding for a spacious feel */
+    display: flex; /* Flexbox for better alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+}
+
+.contact-info p {
+    margin: 8px 0; /* Space between paragraphs */
+    font-size: 18px; /* Comfortable font size */
+    font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+.contact-info a {
+    color: #e67e22; /* Custom green shade */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.contact-info a:hover {
+    color: #fff; /* Change color on hover */
+    text-shadow: 0 0 5px #e67e22; /* Glow effect on hover */
+}
+
+.contact-info i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 20px; /* Increased icon size */
+}
+
+
 .social-links {
     display: flex;
     justify-content: center; /* Centers the icons horizontally */
@@ -1160,6 +1195,14 @@ footer p {
     form textarea {
         font-size: 0.85rem; /* Smaller input font size */
     }
+
+    .contact-info {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-info p {
+        font-size: 14px; /* Slightly smaller text */
+    }
 }
 
 @media (max-width: 930px) {
@@ -1171,6 +1214,18 @@ footer p {
 @media (max-width: 540px) {
     nav .logo {
         margin-right: 450px; /* Further reduce margin for tablets */
+    }
+
+    .contact-info {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .contact-info p {
+        font-size: 12px; /* Even smaller text for mobile */
+    }
+
+    .contact-info a {
+        font-size: 14px; /* Ensure links are readable */
     }
 }
 
